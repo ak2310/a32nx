@@ -36,7 +36,6 @@ class AutothrustModelClass
   struct D_Work_Autothrust_T {
     real_T Delay_DSTATE;
     real_T Delay_DSTATE_k;
-    real_T Delay_DSTATE_j;
     real_T Delay_DSTATE_n;
     real_T Delay_DSTATE_l;
     real_T Delay_DSTATE_lz;
@@ -57,7 +56,6 @@ class AutothrustModelClass
     boolean_T Memory_PreviousInput;
     boolean_T Memory_PreviousInput_m;
     boolean_T icLoad;
-    boolean_T icLoad_c;
     boolean_T eventTime_not_empty;
     boolean_T eventTime_not_empty_n;
     boolean_T ATHR_ENGAGED;
@@ -153,15 +151,25 @@ class AutothrustModelClass
     real_T Gain3_Gain;
     real_T Gain1_Gain;
     real_T Gain_Gain;
-    real_T THRIDLE_Value;
-    real_T THRCLBMCT_Value;
+    real_T Saturation_UpperSat;
+    real_T Saturation_LowerSat;
+    real_T uDLookupTable_tableData[7];
+    real_T uDLookupTable_bp01Data[7];
+    real_T Gain1_Gain_p;
+    real_T Saturation_UpperSat_n;
+    real_T Saturation_LowerSat_j;
+    real_T uDLookupTable_tableData_o[7];
+    real_T uDLookupTable_bp01Data_b[7];
+    real_T Gain1_Gain_o;
+    real_T Saturation_UpperSat_a;
+    real_T Saturation_LowerSat_a;
     real_T RETARD_Value;
     real_T Gain2_Gain;
     real_T Gain3_Gain_c;
     real_T Gain_Gain_d;
     real_T Constant1_Value_l;
-    real_T Saturation_UpperSat;
-    real_T Saturation_LowerSat;
+    real_T Saturation_UpperSat_p;
+    real_T Saturation_LowerSat_h;
     real_T Gain1_Gain_n;
     real_T Saturation1_UpperSat;
     real_T Saturation1_LowerSat;
@@ -175,7 +183,7 @@ class AutothrustModelClass
     real_T Gain_Gain_c;
     real_T Gain1_Gain_j;
     real_T Constant_Value;
-    real_T Gain1_Gain_o;
+    real_T Gain1_Gain_ot;
     real_T Gain1_Gain_f;
     real_T Gain1_Gain_d;
     real_T Gain_Gain_j;
@@ -193,7 +201,7 @@ class AutothrustModelClass
     real_T ktstomps_Gain_h;
     real_T ktstomps1_Gain;
     real_T Gain4_Gain;
-    real_T Gain1_Gain_p;
+    real_T Gain1_Gain_p1;
     real_T Gain1_Gain_di;
     real_T Gain2_Gain_c;
     real_T Gain_Gain_d3;
